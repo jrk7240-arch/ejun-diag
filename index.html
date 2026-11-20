@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>의준이의 실력 진단 기지</title></head>
+<body style="background:#1d2116;color:#efeadb;font-family:sans-serif"><div style="text-align:center;margin-top:40vh" id="m">기지에 접속 중…</div>
+<script>(function(){var API="https://script.google.com/macros/s/AKfycbyIPZVy8igfbQE1-tQeP9H7yIB-M3e-tzWT9LowrTeMCPN50bu9CEuO_8ee_rwEgSX5gQ/exec";
+function go(k){fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({fn:"getDiagApp",a:[]})}).then(function(r){return r.json()}).then(function(j){if(j.err)throw j.err;document.open();document.write(j.r);document.close()}).catch(function(){if(k<3)setTimeout(function(){go(k+1)},1500*(k+1));else document.getElementById("m").textContent="접속하지 못했어요. 새로고침해 주세요."})}
+go(0)})();</script></body></html>
